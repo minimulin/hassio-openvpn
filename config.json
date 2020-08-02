@@ -1,0 +1,20 @@
+{
+    "name": "Hass.io OpenVPN Client",
+    "version": "0.1",
+    "slug": "openvpn",
+    "description": "OpenVPN client",
+    "arch": ["armhf", "armv7", "aarch64", "amd64", "i386"],
+    "url": "https://github.com/minimulin/hassio-openvpn",
+    "startup": "application",
+    "boot": "auto",
+    "options": {
+        "ovpn_file": ""
+    },
+    "schema": {
+        "ovpn_file": "str"
+    },
+    "map": [ "config" ],
+    "host_network": true,
+    "devices": [ "/dev/net/tun:/dev/net/tun:rw" ],
+    "privileged": [ "NET_ADMIN" ]
+}
